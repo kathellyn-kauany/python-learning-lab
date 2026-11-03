@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" width="300" height="140" role="img" aria-label="Lampada neon piscando">
+  <defs>
+    <filter id="nglow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="pool" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#00995D" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#00995D" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#00995D" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bulbfill" cx="42%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#EAFBF2" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#00995D" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#00995D" stop-opacity="0.04"/>
+    </radialGradient>
+  </defs>
+
+  <!-- fio -->
+  <path d="M150 0 V26" stroke="#00995D" stroke-opacity="0.45" stroke-width="1.6" fill="none"/>
+
+  <!-- tudo que pisca -->
+  <g>
+    <animate attributeName="opacity"
+             values="1;1;0.2;1;0.55;1;1;1;0.15;0.9;1;0.35;1;1;1;1;0.7;1"
+             keyTimes="0;0.18;0.2;0.225;0.24;0.26;0.42;0.5;0.515;0.53;0.56;0.575;0.6;0.78;0.86;0.9;0.915;1"
+             dur="5.3s" repeatCount="indefinite"/>
+
+    <!-- luz projetada -->
+    <path d="M150 100 L238 138 H62 Z" fill="url(#pool)"/>
+
+    <!-- soquete -->
+    <rect x="141" y="26" width="18" height="12" rx="2" fill="none" stroke="#00995D" stroke-width="1.8"/>
+    <path d="M143 40 H157 M143 44 H157" stroke="#00995D" stroke-width="1.6" stroke-linecap="round"/>
+
+    <!-- bulbo neon -->
+    <path d="M150 46 C168 46 180 60 180 76 C180 92 166 100 158 106 H142 C134 100 120 92 120 76 C120 60 132 46 150 46 Z"
+          fill="url(#bulbfill)" stroke="#00995D" stroke-width="2.4" stroke-linejoin="round" filter="url(#nglow)"/>
+
+    <!-- filamento -->
+    <path d="M142 106 V88 C142 82 146 80 150 84 C154 88 158 86 158 80 V106"
+          fill="none" stroke="#EAFBF2" stroke-width="2" stroke-linecap="round" filter="url(#nglow)">
+      <animate attributeName="stroke-opacity" values="1;0.65;1;0.85;1" dur="1.7s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- raios -->
+    <g stroke="#00995D" stroke-width="2" stroke-linecap="round" opacity="0.8">
+      <path d="M108 60 L98 55"/>
+      <path d="M192 60 L202 55"/>
+      <path d="M104 92 L94 97"/>
+      <path d="M196 92 L206 97"/>
+    </g>
+  </g>
+
+  <!-- base -->
+  <path d="M138 112 H162" stroke="#00995D" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <path d="M92 130 H208" stroke="#00995D" stroke-width="1" stroke-opacity="0.35"/>
+</svg>
