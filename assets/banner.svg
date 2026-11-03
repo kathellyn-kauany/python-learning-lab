@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Python Learning Lab - Kathellyn Kauany">
+  <defs>
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.1" fill="#00995D" opacity="0.16" />
+    </pattern>
+
+    <radialGradient id="core" cx="42%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#EAFBF2" stop-opacity="1" />
+      <stop offset="38%" stop-color="#8FE9C4" stop-opacity="0.95" />
+      <stop offset="72%" stop-color="#00995D" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#00995D" stop-opacity="0.05" />
+    </radialGradient>
+
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00995D" stop-opacity="0.45" />
+      <stop offset="55%" stop-color="#00995D" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#00995D" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00995D" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00995D" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#00995D" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="rule" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00995D" stop-opacity="0" />
+      <stop offset="18%" stop-color="#00995D" stop-opacity="0.55" />
+      <stop offset="82%" stop-color="#00995D" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#00995D" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="b" />
+      <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.2" result="b" />
+      <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+
+    <style>
+      .mono { font-family: "JetBrains Mono","Fira Code","Cascadia Mono","Consolas","Courier New",monospace; }
+      .sans { font-family: "Inter","Segoe UI","Helvetica Neue",Arial,sans-serif; }
+      .script { font-family: "Segoe Script","Brush Script MT","Snell Roundhand","Apple Chancery","Bradley Hand",cursive; }
+      .lt { fill: #EAFBF2; }
+      .ac { fill: #00995D; }
+    </style>
+  </defs>
+
+  <!-- fundo -->
+  <rect width="1200" height="420" fill="#0D1117" />
+  <rect width="1200" height="420" fill="url(#grid)" />
+  <rect x="0.5" y="0.5" width="1199" height="419" fill="none" stroke="#00995D" stroke-opacity="0.35" />
+  <path d="M0 0 H60 M0 0 V60" stroke="#00995D" stroke-opacity="0.8" stroke-width="2" fill="none" />
+  <path d="M1200 420 H1140 M1200 420 V360" stroke="#00995D" stroke-opacity="0.8" stroke-width="2" fill="none" />
+
+  <!-- divisorias -->
+  <rect x="372" y="36" width="1" height="348" fill="url(#rule)" />
+  <rect x="692" y="36" width="1" height="348" fill="url(#rule)" />
+
+  <!-- ============ COLUNA 1 : citacao + esfera ============ -->
+  <text class="sans lt" x="48" y="74" font-size="16" font-style="italic" opacity="0.92">"A prática constante transfoma</text>
+  <text class="sans lt" x="48" y="98" font-size="16" font-style="italic" opacity="0.92">conceitos complexos em</text>
+  <text class="sans lt" x="48" y="122" font-size="16" font-style="italic" opacity="0.92">soluções reais e eficientes."</text>
+  <text class="script ac" x="48" y="162" font-size="26" font-style="italic">Kathellyn</text>
+  <rect x="48" y="176" width="86" height="1.5" fill="#00995D" opacity="0.7" />
+
+  <!-- halo -->
+  <circle cx="196" cy="278" r="96" fill="url(#halo)">
+    <animate attributeName="r" values="92;102;92" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="5s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- anel orbital -->
+  <ellipse cx="196" cy="278" rx="74" ry="26" fill="none" stroke="#00995D" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="4 7">
+    <animateTransform attributeName="transform" type="rotate" from="0 196 278" to="360 196 278" dur="26s" repeatCount="indefinite" />
+  </ellipse>
+
+  <!-- esfera de luz -->
+  <circle cx="196" cy="278" r="46" fill="url(#core)" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.9;1;0.93;1;0.9" dur="3.4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="182" cy="264" r="11" fill="#EAFBF2" opacity="0.55" filter="url(#soft)" />
+
+  <!-- particulas piscando -->
+  <g fill="#EAFBF2">
+    <circle cx="196" cy="278" r="0" />
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 196 278" to="360 196 278" dur="18s" repeatCount="indefinite" />
+      <circle cx="272" cy="278" r="2.6"><animate attributeName="opacity" values="0.2;1;0.2" dur="1.7s" repeatCount="indefinite" /></circle>
+      <circle cx="196" cy="204" r="2" fill="#00995D"><animate attributeName="opacity" values="1;0.15;1" dur="2.3s" repeatCount="indefinite" /></circle>
+      <circle cx="120" cy="278" r="2.4"><animate attributeName="opacity" values="0.15;0.9;0.15" dur="2.9s" repeatCount="indefinite" /></circle>
+      <circle cx="196" cy="352" r="1.8" fill="#00995D"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.3s" repeatCount="indefinite" /></circle>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="360 196 278" to="0 196 278" dur="24s" repeatCount="indefinite" />
+      <circle cx="256" cy="222" r="1.8"><animate attributeName="opacity" values="0.25;1;0.25" dur="2.1s" repeatCount="indefinite" /></circle>
+      <circle cx="136" cy="334" r="2.2" fill="#00995D"><animate attributeName="opacity" values="1;0.2;1" dur="3.3s" repeatCount="indefinite" /></circle>
+      <circle cx="252" cy="330" r="1.6"><animate attributeName="opacity" values="0.2;0.85;0.2" dur="1.9s" repeatCount="indefinite" /></circle>
+      <circle cx="140" cy="220" r="1.5" fill="#00995D"><animate attributeName="opacity" values="0.8;0.1;0.8" dur="2.6s" repeatCount="indefinite" /></circle>
+    </g>
+  </g>
+
+  <!-- base holografica -->
+  <ellipse cx="196" cy="352" rx="82" ry="15" fill="none" stroke="url(#base)" stroke-width="2" />
+  <ellipse cx="196" cy="358" rx="58" ry="10" fill="none" stroke="#00995D" stroke-opacity="0.45" stroke-width="1" />
+  <ellipse cx="196" cy="364" rx="34" ry="6" fill="none" stroke="#00995D" stroke-opacity="0.28" stroke-width="1" />
+  <path d="M150 352 L196 372 L242 352" fill="none" stroke="#00995D" stroke-opacity="0.3" stroke-width="1" />
+
+  <!-- ============ COLUNA 2 : modulos de estudo ============ -->
+  <text class="mono ac" x="404" y="66" font-size="11" letter-spacing="3">MODULOS</text>
+
+  <!-- Computacao Numerica -->
+  <g transform="translate(404,92)">
+    <path d="M13 1 L24 7.5 V20.5 L13 27 L2 20.5 V7.5 Z" fill="none" stroke="#00995D" stroke-width="1.6" />
+    <circle cx="13" cy="14" r="3.4" fill="#00995D" />
+  </g>
+  <text class="sans lt" x="444" y="106" font-size="15" font-weight="600">Computação Numérica</text>
+  <text class="sans lt" x="444" y="125" font-size="11.5" opacity="0.6">NumPy, matrizes 2D, vetorização & eixos</text>
+
+  <!-- Analise de Dados -->
+  <g transform="translate(404,160)">
+    <path d="M9 5 L2 14 L9 23 M17 5 L24 14 L17 23" fill="none" stroke="#00995D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <text class="sans lt" x="444" y="174" font-size="15" font-weight="600">Análise de Dados</text>
+  <text class="sans lt" x="444" y="193" font-size="11.5" opacity="0.6">Pandas, estatística descritiva & ETL</text>
+
+  <!-- Visao Computacional -->
+  <g transform="translate(404,228)">
+    <circle cx="13" cy="14" r="8.5" fill="none" stroke="#00995D" stroke-width="1.6" />
+    <circle cx="13" cy="14" r="2.6" fill="#00995D" />
+    <path d="M13 1.5 V5 M13 23 V26.5 M0.5 14 H4 M22 14 H25.5 M4.5 5.5 L7 8 M19 20 L21.5 22.5 M21.5 5.5 L19 8 M7 20 L4.5 22.5" stroke="#00995D" stroke-width="1.6" stroke-linecap="round" />
+  </g>
+  <text class="sans lt" x="444" y="242" font-size="15" font-weight="600">Visão Computacional</text>
+  <text class="sans lt" x="444" y="261" font-size="11.5" opacity="0.6">OpenCV, filtros de imagem & matrizes</text>
+
+  <!-- Automacao & IA -->
+  <g transform="translate(404,296)">
+    <rect x="2" y="4" width="7" height="19" fill="none" stroke="#00995D" stroke-width="1.6" />
+    <rect x="12" y="4" width="7" height="13" fill="none" stroke="#00995D" stroke-width="1.6" />
+    <rect x="22" y="4" width="2.5" height="8" fill="#00995D" />
+  </g>
+  <text class="sans lt" x="444" y="310" font-size="15" font-weight="600">Automação & IA</text>
+  <text class="sans lt" x="444" y="329" font-size="11.5" opacity="0.6">Scripts, pipelines & modelos preditivos</text>
+
+  <!-- ============ COLUNA 3 : laboratorio ============ -->
+  <text class="mono ac" x="724" y="66" font-size="11" letter-spacing="3">// REPOSITORIO</text>
+
+  <text class="mono lt" x="722" y="140" font-size="52" font-weight="700" letter-spacing="2">PYTHON_</text>
+  <rect x="724" y="158" width="210" height="2" fill="#00995D" />
+
+  <text class="mono ac" x="724" y="186" font-size="12.5" letter-spacing="1.6"> Learning Lab & Projetos Práticos</text>
+
+  <text class="sans lt" x="724" y="224" font-size="17" font-weight="600">Algoritmos, estruturas e bibliotecas.</text>
+  <text class="sans lt" x="724" y="250" font-size="17" font-weight="600">Projetos reais aplicados à saúde e negócios.</text>
+  <text class="sans lt" x="724" y="276" font-size="17" font-weight="600">Código limpo e otimização matemática.</text>
+
+  <text class="sans lt" x="724" y="308" font-size="12" opacity="0.62">Espaço dedicado ao desenvolvimento de soluções</text>
+  <text class="sans lt" x="724" y="326" font-size="12" opacity="0.62">práticas em Python, cobrindo da lógica aos modelos</text>
+  <text class="sans lt" x="724" y="344" font-size="12" opacity="0.62">avançados de IA e computação científica.</text>
+
+  <g class="mono">
+    <text class="ac" x="724" y="378" font-size="12" opacity="0.85">$ status: learning & building</text>
+    <rect x="948" y="368" width="8" height="12" fill="#00995D">
+      <animate attributeName="opacity" values="1;1;0;0" dur="1.1s" repeatCount="indefinite" />
+    </rect>
+  </g>
+</svg>
