@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../assets/banner-faculdade.svg" alt="faculdade" width="100%">
+  <img src="assets/banner-faculdade.svg" alt="faculdade" width="100%">
 </p>
 
 # 🎓 Faculdade
