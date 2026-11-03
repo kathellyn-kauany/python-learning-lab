@@ -4,7 +4,6 @@ Descrição: Evolução do motor matemático para uma aplicação interativa com
            Permite o cadastro dinâmico de pacientes via terminal, construção automática 
            da matriz multidimensional e geração de relatórios de triagem amigáveis ao usuário.
 Tecnologias: Python 3, NumPy, Tratamento de Strings e Loops Dinâmicos.
-Autor: Kathellyn Kauany
 """
 
 import numpy as np
