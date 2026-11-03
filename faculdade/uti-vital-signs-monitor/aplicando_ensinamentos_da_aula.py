@@ -1,3 +1,9 @@
+"""
+Projeto: Monitoramento e Triagem de UTI com NumPy
+Descrição: Script desenvolvido para fixação dos conceitos fundamentais da biblioteca NumPy 
+           (arrays multidimensionais, operações por eixos, máscaras booleanas e np.where),
+           aplicados a um cenário real de análise de dados de saúde.
+"""
 import numpy as np
 
 lista_nomes = []
